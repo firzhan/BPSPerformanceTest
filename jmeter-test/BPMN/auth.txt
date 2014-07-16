@@ -1,0 +1,2 @@
+# JMeter generated Authorization file
+https://10.100.5.108:9443/services	admin	admin			BASIC_DIGEST

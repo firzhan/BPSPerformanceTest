@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:echoasyncprocess="http://wso2.org/bps/echoasyncprocess" xmlns:training.bpl.wso2.org="http://training.bpl.wso2.org">
+  <process name="echoasyncprocess:EchoAsyncProcess">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="none"/>
+    <provide partnerLink="client">
+      <service name="echoasyncprocess:EchoAsyncProcess" port="EchoAsyncProcessPort"/>
+    </provide>
+    <invoke partnerLink="gmPL">
+      <service name="training.bpl.wso2.org:GoodMorning" port="GoodMorningHttpEndpoint"/>
+    </invoke>
+  </process>
+</deploy>
